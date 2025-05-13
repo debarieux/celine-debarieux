@@ -97,7 +97,7 @@ const AboutSection = ({ id, title, content, image, reversed = false, delay = 0 }
                   src={image}
                   alt={title}
                   fill
-                  className="object-cover"
+                  className={`object-cover ${id === 'demarche' ? 'mobile-dog-image' : ''}`}
                 />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-noir/30 to-transparent opacity-50"></div>
@@ -196,7 +196,7 @@ export default function APropos() {
         <AboutSection 
           id="demarche"
           title="Ma démarche artistique"
-          image="/assets/sample2.jpg"
+          image="/assets/phenix.jpg"
           content={
             <>
               <p className="text-xl font-medium text-noir mb-5">Une photographie pensée, pas simplement prise.</p>
@@ -210,7 +210,7 @@ export default function APropos() {
         <AboutSection 
           id="souvenirs"
           title="Ce que vous emportez avec vous"
-          image="/assets/naissance.jpg"
+          image="/assets/souvenir.jpg"
           reversed={true}
           delay={0.2}
           content={

@@ -231,6 +231,26 @@
   text-shadow: 0 2px 16px #e8e0c0a0, 0 1px 0 #a69660;
 }
 
+/* Insérer un saut de ligne après 'L'Art du Portrait' sur mobile uniquement */
+@media (max-width: 767px) {
+  .gold-title::after {
+    content: '';
+    display: block;
+    height: 0;
+  }
+}
+
+/* Cibler spécifiquement le 10ème caractère (après 'L'Art du Portrait') pour insérer un saut de ligne */
+@media (max-width: 767px) {
+  .title-letter:nth-child(17) {
+    margin-right: 0 !important;
+  }
+  .title-letter:nth-child(18) {
+    display: block !important;
+    margin-top: -0.5em; /* Réduit davantage l'espace vertical entre les deux lignes */
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -375,4 +395,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .c-scrollbar:hover .c-scrollbar_thumb {
   opacity: 0.8;
+}
+
+/* Ajustement de l'image du chien en version mobile uniquement */
+@media (max-width: 767px) {
+  .mobile-dog-image {
+    object-position: center 30% !important; /* Décale l'image vers le haut pour centrer la tête du chien */
+  }
 }

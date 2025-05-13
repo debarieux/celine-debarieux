@@ -44,7 +44,7 @@ export default function About() {
               <span className="relative z-10 text-noir"
                 style={{ textShadow: '0 1px 0 rgba(194, 178, 128, 0.3)' }}
               >
-                à propos de <span className="text-gold">Céline Debarieux</span>
+                À Propos <span className="text-gold">Céline Debarieux</span>
               </span>
               <span className="absolute bottom-0 left-0 w-full h-1 bg-gold/20 rounded-full"></span>
             </span>
